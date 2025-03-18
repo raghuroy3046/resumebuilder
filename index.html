@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luxurious Resume Builder</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RESUME BUILDER</h1>
+
+        <!-- Resume Form -->
+        <form id="resume-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="summary" placeholder="Professional Summary"></textarea>
+
+            <!-- Experience Section -->
+            <div id="experience-fields">
+                <h3>Work Experience</h3>
+                <button type="button" onclick="addExperience()">Add Experience</button>
+            </div>
+
+            <!-- Skill Section -->
+            <div id="skill-fields">
+                <h3>Skills</h3>
+                <button type="button" onclick="addSkill()">Add Skill</button>
+            </div>
+
+            <!-- Project Section -->
+            <div id="project-fields">
+                <h3>Projects</h3>
+                <button type="button" onclick="addProject()">Add Project</button>
+            </div>
+
+            <!-- Education Section -->
+            <div id="education-fields">
+                <h3>Education</h3>
+                <button type="button" onclick="addEducation()">Add Education</button>
+            </div>
+
+            <!-- Hobbies Section -->
+            <div id="hobbies-fields">
+                <h3>Hobbies & Interests</h3>
+                <button type="button" onclick="addHobbies()">Add Hobby/Interest</button>
+            </div>
+
+            <!-- Resume Templates & Theme Options -->
+            <h3>Select Resume Template</h3>
+            <select id="template-selector">
+                <option value="template1">Modern</option>
+                <option value="template2">Classic</option>
+                <option value="template3">Creative</option>
+                <option value="template4">Professional</option>
+                <option value="template5">Minimal</option>
+            </select>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <!-- Resume Preview Section -->
+        <div id="resume-preview" class="template1">
+            <h2>Resume Preview</h2>
+            <div id="resume-content"></div>
+        </div>
+
+        <button onclick="downloadPDF()">📥 Download as PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
